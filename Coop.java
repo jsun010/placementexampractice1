@@ -40,7 +40,7 @@ public class Coop {
             for (Map.Entry<String, Integer> entry : recipeIngredients.entrySet()) {
                 String ingredientName = entry.getKey();
                 int quantity = entry.getValue();
-                int pantryIngredient=pantryItems.get(ingredientName).getOrDefault(ingredientName, 0);
+                int pantryIngredient=familyPantry.get(ingredientName);
                 int quantityNeeded=quantity-pantryIngredient;
                 if (quantityNeeded>0) {
                     orderItems.put(ingredientName, quantity);
